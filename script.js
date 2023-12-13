@@ -1,5 +1,13 @@
 const myLibrary = [];
 
+const submit = document.getElementsByClassName("submit");
+submit.addEventListener("click", addBookToLibrary());
+
+const author = getElementsByClassName("author");
+const title = getElementsByClassName("title");
+const pageCount = getElementsByClassName("pageCount");
+const readStatus = getElementsByClassName("readStatus");
+
 function Book(author, title, pageCount, readStatus) {
   // the constructor...
     this.author = author;
@@ -14,6 +22,7 @@ function Book(author, title, pageCount, readStatus) {
 
 function addBookToLibrary() {
   // do stuff here
+   
 }
 
 const testBook = new Book('charlie', 'ctbook', '999', 'yes');
