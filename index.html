@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Library Project</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    
 </head>
 
 <body>
     <div id="header">Header</div>
+
     <div id="form-container">
-        <form action="" method="get">
+        <form id="form" action="" method="get">
             <div><label for="authorInput">Author<input type="text" id="authorInput"></label></div>
             <div><label for="titleInput">Title<input type="text" id="titleInput"></label></div>
             <div><label for="pageCountInput">Page Count<input type="number" id="pageCountInput"></label></div>
-            <div><label for="readStatusInput">Have you read this book?<input type="checkbox" id="readStatusInput"></label></div>
-            
-            <button id="submit" type="submit" onclick="addBookToLibrary()">Add book</button>
-            
+            <div><label for="readStatusInput">Have you read this book?<input type="checkbox"
+                        id="readStatusInput"></label></div>
+            <button id="submit" onclick="addBookToLibrary()">Add book</button>
+        </form>
+
+
     </div>
-    </form>
-    </div>
+<script src="script.js" defer></script>
 </body>
 
 </html>

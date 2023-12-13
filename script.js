@@ -1,6 +1,13 @@
-const myLibrary = [];
+const myLibrary = [
+  {
+    title: "The Fellowship of the Ring",
+    author: "J.R.R Tolkien",
+    pages: "432",
+    read: "true"
+  }
+];
 
-$form = document.querySelector(".form");
+$form = document.querySelector("#form");
 $titleInput = form.querySelector("#titleInput");
 $authorInput = form.querySelector("#authorInput");
 $pageCountInput = form.querySelector("#pageCountInput");
@@ -16,14 +23,26 @@ function Book(author, title, pageCount, readStatus) {
     
 }
 
-function addBookToLibrary = () => {
+const addBookToLibrary = () => {
   // do stuff here
   console.log("button enabled");
-
+  let title = $titleInput.value;
+  let author = $authorInput.value;
+  let pageCount = $pageCountInput.value;
+  let readStatus = $readStatusInput.value;
+  let newBook = new Book(author, title, pageCount, readStatus);
+  myLibrary.push(newBook);
 }
 
-const submit = document.getElementById("submit");
+$submit.addEventListener('click', () => {
+  addBookToLibrary();
+
+})
+
+function displayLibrary() {
+  myLibrary.forEach(element => {
+    console.log(element);
+  });
+}
 
 
-
-const testBook = new Book('charlie', 'ctbook', '999', 'yes');
