@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <div class="header">Header</div>
-    <div class="form-container">
+    <div id="header">Header</div>
+    <div id="form-container">
         <form action="" method="get">
             <div><label for="author">Author<input type="text" id="author"></label></div>
             <div><label for="title">Title<input type="text" id="title"></label></div>
             <div><label for="pageCount">Page Count<input type="number" id="pageCount"></label></div>
             <div><label for="readStatus">Have you read this book?<input type="checkbox" id="readStatus"></label></div>
             
-            <button class="submit" type="submit">Add book</button>
+            <button id="submit" type="submit" onclick="addBookToLibrary()">Add book</button>
             
     </div>
     </form>
