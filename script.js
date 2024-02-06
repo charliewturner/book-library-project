@@ -7,42 +7,39 @@ const myLibrary = [
   }
 ];
 
-$form = document.querySelector("#form");
-$titleInput = form.querySelector("#titleInput");
-$authorInput = form.querySelector("#authorInput");
-$pageCountInput = form.querySelector("#pageCountInput");
-$readStatusInput = form.querySelector("#readStatusInput");
-$submit = form.querySelector("#submit");
+$submit = document.querySelector("#submit");
 
-function Book(author, title, pageCount, readStatus) {
+function Book(title, author, pageCount, readStatus) {
   // the constructor...
   this.author = author;
   this.title = title;
   this.pageCount = pageCount;
   this.readStatus = readStatus;
-    
 }
 
 const addBookToLibrary = () => {
   // do stuff here
-  console.log("button enabled");
-  let title = $titleInput.value;
-  let author = $authorInput.value;
-  let pageCount = $pageCountInput.value;
-  let readStatus = $readStatusInput.value;
-  let newBook = new Book(author, title, pageCount, readStatus);
+  let title = document.querySelector("#titleInput").value;
+  let author = document.querySelector("#authorInput").value;
+  let pageCount = document.querySelector("#pageCountInput").value;
+  let readStatus = checkReadStatus();
+  let newBook = new Book(title, author, pageCount, readStatus);
+  console.log(newBook);
   myLibrary.push(newBook);
+  console.log(myLibrary);
 }
 
+function checkReadStatus() {
+  if (document.querySelector("#readStatusInput").checked) {
+    return true;
+  } else {
+    return false;
+  }
+}
 $submit.addEventListener('click', () => {
+  event.preventDefault();
   addBookToLibrary();
-
 })
 
-function displayLibrary() {
-  myLibrary.forEach(element => {
-    console.log(element);
-  });
-}
 
 
