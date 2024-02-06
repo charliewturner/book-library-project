@@ -24,9 +24,9 @@ const addBookToLibrary = () => {
   let pageCount = document.querySelector("#pageCountInput").value;
   let readStatus = checkReadStatus();
   let newBook = new Book(title, author, pageCount, readStatus);
-  console.log(newBook);
   myLibrary.push(newBook);
   console.log(myLibrary);
+  displayLibrary();
 }
 
 function checkReadStatus() {
@@ -41,5 +41,18 @@ $submit.addEventListener('click', () => {
   addBookToLibrary();
 })
 
-
+function displayLibrary() {
+  let libraryElement = document.querySelector("#library");
+  for (let i = 0; i > myLibrary.length; i++) {
+    let book = myLibrary[i];
+    let bookElement = document.createElement("tr");
+    bookElement.innerHTML = `
+    <td>${book.title}</td>
+    <td>${book.author}</td>
+    <td>${book.pageCount}/td>
+    <td>${book.readStatus}</td>
+    <td><button></button></td> `;
+    libraryElement.appendChild(bookElement);
+  }
+}
 
