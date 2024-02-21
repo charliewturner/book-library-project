@@ -2,8 +2,8 @@ const myLibrary = [
   {
     title: "The Fellowship of the Ring",
     author: "J.R.R Tolkien",
-    pages: "432",
-    read: "true"
+    pageCount: "432",
+    readStatus: "true"
   }
 ];
 
@@ -26,7 +26,7 @@ const addBookToLibrary = () => {
   let newBook = new Book(title, author, pageCount, readStatus);
   myLibrary.push(newBook);
   console.log(myLibrary);
-  displayLibrary();
+
 }
 
 function checkReadStatus() {
@@ -36,22 +36,26 @@ function checkReadStatus() {
     return false;
   }
 }
+
 $submit.addEventListener('click', () => {
   event.preventDefault();
   addBookToLibrary();
+  displayLibrary();
 })
 
 function displayLibrary() {
+
   let libraryElement = document.querySelector("#library");
-  for (let i = 0; i > myLibrary.length; i++) {
+  for (let i = 0; i < myLibrary.length; i++) {
     let book = myLibrary[i];
-    let bookElement = document.createElement("tr");
+    let bookElement = document.createElement("div");
     bookElement.innerHTML = `
-    <td>${book.title}</td>
-    <td>${book.author}</td>
-    <td>${book.pageCount}/td>
-    <td>${book.readStatus}</td>
-    <td><button></button></td> `;
+    <div class = "book-card">
+      <h3 class = "title">${book.title}</h3>
+      <h5 class = "author">${book.author}</h5>
+      <h5 class = "page-count">${book.pageCount}</h5>
+      <h5 class = "read-status">${book.readStatus}</h5>
+    </div> `;
     libraryElement.appendChild(bookElement);
   }
 }

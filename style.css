@@ -31,14 +31,19 @@ input{
     flex: 1;
 }
 
-.table{
-    
+.headers, #library{
     border-style: solid;
     border-width: 2px;
+    margin: 2px;
 }
 
-th, td{
-   
+#library {
+    display: flex;
+}
+.book-card {
+    width: 100px;
+    text-wrap: wrap;
     border-style: solid;
     border-width: 2px;
+    margin: 2px;
 }
