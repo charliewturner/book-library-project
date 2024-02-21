@@ -60,7 +60,10 @@ input{
     border-style: solid;
     border-width: 2px;
     margin: 2px;
-    padding: 3px;
+    padding: 15px;
+    min-height: 220px;
+    background-color: rgba(1, 21, 102, 0.486);
+    border-radius: 15px;
 }
 
 .book-card > *{
@@ -68,5 +71,5 @@ input{
     margin: auto;
     word-break: break-all;
     padding: 5px;
-
+    
 }
