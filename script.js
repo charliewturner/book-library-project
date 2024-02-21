@@ -46,6 +46,7 @@ $submit.addEventListener('click', () => {
 function displayLibrary() {
 
   let libraryElement = document.querySelector("#library");
+  libraryElement.innerHTML = '';
   for (let i = 0; i < myLibrary.length; i++) {
     let book = myLibrary[i];
     let bookElement = document.createElement("div");
