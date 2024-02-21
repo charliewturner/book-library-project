@@ -51,12 +51,13 @@ function displayLibrary() {
     let bookElement = document.createElement("div");
     bookElement.innerHTML = `
     <div class = "book-card">
-      <h3 class = "title">${book.title}</h3>
-      <h5 class = "author">${book.author}</h5>
-      <h5 class = "page-count">${book.pageCount}</h5>
-      <h5 class = "read-status">${book.readStatus}</h5>
+      <h3 class = "title">${book.title}</h3><br /><br />
+      <h5 class = "author">${book.author}</h5><br /><br />
+      <h5 class = "page-count">${book.pageCount}</h5><br /><br />
+      <h5 class = "read-status">${book.readStatus}</h5><br /><br />
     </div> `;
     libraryElement.appendChild(bookElement);
   }
 }
 
+displayLibrary()
