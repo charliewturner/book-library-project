@@ -39,7 +39,8 @@ input{
 
 #library {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    
 }
 .book-card {
     display: flex;
