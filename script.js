@@ -52,10 +52,10 @@ function displayLibrary() {
     let bookElement = document.createElement("div");
     bookElement.innerHTML = `
     <div class = "book-card">
-      <h3 class = "title">${book.title}</h3><br /><br />
-      <h5 class = "author">${book.author}</h5><br /><br />
-      <h5 class = "page-count">${book.pageCount}</h5><br /><br />
-      <h5 class = "read-status">${book.readStatus}</h5><br /><br />
+      <h3 class = "title">${book.title}</h3><br />
+      <h5 class = "author">by ${book.author}</h5><br />
+      <h5 class = "page-count">${book.pageCount} pages</h5><br />
+      <h5 class = "read-status">${book.readStatus}</h5><br />
     </div> `;
     libraryElement.appendChild(bookElement);
   }
