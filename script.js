@@ -43,6 +43,8 @@ $submit.addEventListener('click', () => {
   displayLibrary();
 })
 
+
+
 function displayLibrary() {
 
   let libraryElement = document.querySelector("#library");
@@ -51,14 +53,23 @@ function displayLibrary() {
     let book = myLibrary[i];
     let bookElement = document.createElement("div");
     bookElement.innerHTML = `
-    <div class = "book-card">
-      <h3 class = "title">${book.title}</h3><br />
+    <div class = "book-card" id=${i}>
+      <h3 class = "title">${book.title}</h3>
+      <button type = "button" class="delete" onclick="deleteBook(${i})">Delete!</button>
+      <br />
       <h5 class = "author">by ${book.author}</h5><br />
       <h5 class = "page-count">${book.pageCount} pages</h5><br />
       <h5 class = "read-status">${book.readStatus}</h5><br />
     </div> `;
+
     libraryElement.appendChild(bookElement);
   }
 }
+
+function deleteBook(i){
+  myLibrary.splice(i, 1);
+  displayLibrary();
+}
+
 
 displayLibrary()
