@@ -1,22 +1,75 @@
+* {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
 
 
-.header{
+.enterBook{
+    margin-bottom: 10px;
+    background-color: white;
+    border: none;
+    font-size: large;
+}
+.enterBook:hover{
+    font-weight: bold;
+    box-shadow: inset;
+    
+}
+.enterBook:active{
+    font-weight: bold;
+    box-shadow: inset;
+    border-style: inset;
+    background-color: rgba(0, 0, 0, 0.041);
+}
+
+.delete{
+    background-color: none;
+    background-color: rgba(1, 21, 102, 0);
+    border-radius: 5px;
+    font-weight: bold;
+}
+.delete:hover{
+    background-color: rgba(1, 21, 102, 0);
+    font-weight: bold;
+    border-style: inset;
+}
+.delete:active{
+    background-color: rgba(1, 21, 102, 0.39);
+    font-weight: bold;
+    border-style: inset;
+}
+.changeReadStatus{
+    background-color: none;
+    background-color: rgba(1, 21, 102, 0);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.changeReadStatus:hover{
+    background-color: rgba(1, 21, 102, 0);
+    font-weight: bold;
+    border-style: inset;
+}
+
+.changeReadStatus:active{
+    background-color: rgba(1, 21, 102, 0.39);
+    font-weight: bold;
+    border-style: inset;
+}
+
+.header {
     display: flex;
     flex: 1;
     border-style: solid;
     border-width: 2px;
-   
-
 }
 
-.upper{
+.upper {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    
 }
-   
-#form-container{
+
+#form-container {
     display: flex;
     flex-direction: row;
     border-style: solid;
@@ -27,34 +80,34 @@
     justify-content: center;
 }
 
-#form > *{
+#form>* {
     margin: auto;
-    
 }
 
-#label{
+#label {
     padding: 5px;
     padding: auto;
 }
 
-input{
+input {
     display: flex;
     flex: 1;
 }
 
-.headers, #library{
-    border-style: solid;
-    border-width: 2px;
+.headers,
+#library {
+
     margin: 2px;
 }
 
 #library {
     display: flex;
     flex-wrap: wrap;
-   justify-content: center;
+    justify-content: center;
     margin: 50px;
     margin-top: 0;
 }
+
 .book-card {
     display: flex;
     flex-direction: column;
@@ -64,15 +117,15 @@ input{
     margin: 2px;
     padding: 15px;
     min-height: 220px;
-    background-color: rgba(1, 21, 102, 0.486);
+    background-color: rgba(1, 21, 102, 0.479);
     border-radius: 15px;
 }
 
-.book-card > *{
+.book-card>* {
     display: flex;
     margin: auto;
     text-align: center;
-    word-break:normal;
+    word-break: normal;
     padding: 5px;
-    
+
 }
