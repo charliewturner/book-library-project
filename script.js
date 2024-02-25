@@ -4,6 +4,12 @@ const myLibrary = [
     author: "J.R.R Tolkien",
     pageCount: "432",
     readStatus: "true"
+  },
+  {
+    title: "Sapiens: A Brief History of Mankind",
+    author: "Yuval Noah Harari",
+    pageCount: "464",
+    readStatus: "true"
   }
 ];
 
@@ -70,17 +76,27 @@ function displayLibrary() {
       <br />
       <h5 class = "author">by ${book.author}</h5><br />
       <h5 class = "page-count">${book.pageCount} pages</h5><br />
-      <h5 class = "read-status">${book.readStatus}</h5><br />
+      <h5 class = "read-status">Read status: ${book.readStatus}</h5><br />
+      <button type = "button" class="changeReadStatus${i}" onclick="changeReadStatus(${i})">Change read status</button>
     </div> `;
 
     libraryElement.appendChild(bookElement);
   }
 }
 
-function deleteBook(i){
+function deleteBook(i) {
   myLibrary.splice(i, 1);
   displayLibrary();
 }
+
+ function changeReadStatus(i) {
+    if (myLibrary[i].readStatus == true) {
+      myLibrary[i].readStatus = false;
+    } else {
+      myLibrary[i].readStatus = true;
+    }
+    displayLibrary();
+} 
 
 
 displayLibrary();

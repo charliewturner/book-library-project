@@ -69,7 +69,8 @@ input{
 .book-card > *{
     display: flex;
     margin: auto;
-    word-break: break-all;
+    text-align: center;
+    word-break:normal;
     padding: 5px;
     
 }
