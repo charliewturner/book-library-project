@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Library Project</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div id="header">Book Library</div>
     <div class="upper">
-        <dialog>
-            <button autofocus>Close form</button>
-            <div id="form-container">
-                <form id="form" action="" method="get">
-                    <label id='label' for="titleInput">Title</label>
-                    <input type="text" id="titleInput">
-                    <label id='label'for="authorInput">Author</label>
-                    <input type="text" id="authorInput">
-                    <label id='label'for="pageCountInput">Page Count</label>
-                    <input type="number" id="pageCountInput">
-                    <label id='label'for="readStatusInput">Have you read this book?</label>
-                    <input type="checkbox" id="readStatusInput">
-                    <button id="submit">Add book</button>
-                </form>
-            </div>
-        </dialog>
-        <button class = "enterBook">Enter a new book</button>
-        
-
-
+      <dialog>
+        <button autofocus>Close form</button>
+        <div id="form-container">
+          <form id="form" action="" method="get">
+            <label id="label" for="titleInput">Title</label>
+            <input type="text" id="titleInput" required />
+            <label id="label" for="authorInput">Author</label>
+            <input type="text" id="authorInput" required />
+            <label id="label" for="pageCountInput">Page Count</label>
+            <input
+              type="number"
+              id="pageCountInput"
+              min="1"
+              max="10000"
+              required
+            />
+            <label id="label" for="readStatusInput"
+              >Have you read this book?</label
+            >
+            <input type="checkbox" id="readStatusInput" />
+            <button id="submit">Add book</button>
+          </form>
+        </div>
+      </dialog>
+      <button class="enterBook">Enter a new book</button>
     </div>
 
     <div class="lower">
-        <div id="library"></div>
+      <div id="library"></div>
     </div>
     <script src="script.js" defer></script>
-</body>
-
+  </body>
 </html>
